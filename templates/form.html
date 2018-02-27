@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      body{
+      text-align: center;
+      }
+    </style>
   </head>
-
   <body>
 
-    <h3>Search by Name</h3>
-    <form action="/name">
+    <h3>Search by Name</h3><br>
+    <h3>Type in a pokemon's name to find its information!</h3>
+    <form method="POST" action="/name">
       Pokemon: <br>
       <input type="text" name="pokemon">
       <input type="submit" value="submit">
     </form>
 
     <h3>Search by Eggtype</h3>
-    <form action="/eggtype">
-      <select>
+    <form method="POST" action="/eggtype">
+      <select name="eggtype">
 	<option value="2 km">2 km</option>
 	<option value="5 km">5 km</option>
 	<option value="10 km">10 km</option>

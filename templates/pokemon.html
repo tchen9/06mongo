@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+      text-align: center;
+      }
+      </style>
+  </head>
+  <body>
+    {% if (query == "name") %}
+    <h3>{{name}}</h3>   <br>
+    <img src={{image}}> <br>
+    Height: {{height}}  <br>
+    Weight: {{weight}}  <br>
+    {% endif %}
+
+    {% if (query == "eggtype") %}
+    {% for each in pokelist %}
+    <h3>{{each[0]}}</h3><br>
+    <img src={{each[1]}}><br>
+    Height: {{each[2]}}<br>
+    Weight: {{each[3]}}<br>
+    {% endfor %}
+    {% endif %}
+  </body>
+</html>
